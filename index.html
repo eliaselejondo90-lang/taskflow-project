@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Taskflow</title>
+
+<style>
+
+:root{
+  --color-principal:#4f46e5;
+  --color-fondo:#f3f4f6;
+  --color-card:#ffffff;
+  --espacio:16px;
+  --fuente:Arial, sans-serif;
+}
+
+body{
+  margin:0;
+  font-family:var(--fuente);
+  background:var(--color-fondo);
+  display:flex;
+}
+
+/* SIDEBAR */
+aside{
+  width:250px;
+  background:var(--color-principal);
+  color:white;
+  padding:var(--espacio);
+}
+
+/* CONTENIDO */
+main{
+  flex:1;
+  padding:var(--espacio);
+}
+
+/* HEADER */
+header{
+  margin-bottom:20px;
+}
+
+/* TARJETAS DE TAREAS */
+section{
+  background:var(--color-card);
+  padding:var(--espacio);
+  margin-bottom:10px;
+  border-radius:8px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  transition:0.3s;
+}
+
+section:hover{
+  transform:scale(1.02);
+}
+
+/* BADGES */
+.badge{
+  padding:4px 10px;
+  border-radius:5px;
+  font-size:12px;
+}
+
+.alta{
+  background:red;
+  color:white;
+}
+
+.media{
+  background:orange;
+  color:white;
+}
+
+.baja{
+  background:green;
+  color:white;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+
+body{
+  flex-direction:column;
+}
+
+aside{
+  width:100%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<aside>
+<h2>Taskflow</h2>
+<p>Panel de tareas</p>
+</aside>
+
+<main>
+
+<header>
+<h1>Lista de tareas</h1>
+</header>
+
+<section>
+<span>Diseñar interfaz</span>
+<span class="badge alta">Alta</span>
+</section>
+
+<section>
+<span>Crear base de datos</span>
+<span class="badge media">Media</span>
+</section>
+
+<section>
+<span>Documentar proyecto</span>
+<span class="badge baja">Baja</span>
+</section>
+
+</main>
+
+</body>
+</html>
